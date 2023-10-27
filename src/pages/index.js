@@ -1,10 +1,10 @@
-import Battleship from "@/Components/Battleship";
+import Game from "@/Components/Game";
 
 export default function Home() {
-  console.log("pages/index.js")
+  //console.log("pages/index.js")
   return (
     <>
-      <Battleship />
+      <Game />
     </>
   );
 }
