@@ -1,44 +1,32 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState} from "react";
 
-import StartPage from "./startPage";
-import Board from "./board"
-import TitleBar from "./TitleBar";
+import Board from "./board/board";
+import Legend from "./legend";
+
 
 
 
 
 const Game = () => {
+  const [gameStarted, setStartGame] = useState(false);
+  const [currentPlayer, setCurrentPlayer] = useState(true);
 
-  // comon states
-  const [startGame, setStartGame] = useState(false);
 
-  if (!startGame) {
-    return <StartPage onClick={() => setStartGame(true)} />;
-  }
-  return (
-    <div className="battleship__stage">
-      {/*<TitleBar />*/}
-      <Summary
-        hasGameStarted={hasGameStarted}
-        playerAvailableShips={playerAvailableShips}
-        playerDeployedShips={playerDeployedShips}
-        computerDeployedShips={computerDeployedShips}
-        handleGameStart={handleGameStart}
+  return(
+    <div className="screen">
+      <Legend
+        gameStarted={gameStarted}
         currentPlayer={currentPlayer}
       />
-
-              <Board />
-                {/*hasGameStarted={hasGameStarted}
-                selectedShipToPlace={selectedShipToPlace}
-                onClickBoradSquare={onClickBoradSquare}
-                deployedShips={playerDeployedShips}
-                boardOwner={CURRENT_PLAYER.player}
-              />*/}
-    </div> 
+      <Board 
+        GameStarted={gameStarted}
+        boardOwner={true}
+      />  
+    </div>  
   );
 };
 
-Game.displayName = "Battleship";
+Game.displayName = "Морской бой";
 
 export default Game;

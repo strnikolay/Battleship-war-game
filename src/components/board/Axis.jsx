@@ -1,4 +1,4 @@
-import AxisItem from "./AxisItem";
+
 
 const Axis = ({ direction = "row" }) => {
   const getAxisLabels = (direction) => {
@@ -11,10 +11,11 @@ const Axis = ({ direction = "row" }) => {
     }
   };
 
+
   return (
-    <div className={`battleship__axis ${direction}`}>
+    <div className={`square-title ${direction}`}>
       {getAxisLabels(direction).map((label, index) => {
-        return <AxisItem key={`axis_label_${label}`} label={label} />;
+        return <div key={`square-title-label_${label}`} className="square-title-label">{label}</div>;
       })}
     </div>
   );

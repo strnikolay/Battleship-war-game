@@ -1,30 +1,23 @@
-import SummaryGameStats from "./SummaryStats";
 
-const index = ({
-  hasGameStarted,
-  playerAvailableShips,
-  handleGameStart,
+
+const Legend = ({
+  gameStarted,
   currentPlayer,
-  playerDeployedShips,
-  computerDeployedShips
 }) => {
   return (
-    <div className="summary">
-      <div className="summary__info">
-        <h3>Ходит игрок: {currentPlayer}</h3>
+    <div className="legend">
+      <div className="legend__info">
+        <h3>Ходит: {currentPlayer ? "Игрок": "Компьютер"}</h3>
       </div>
-      <div className="summary__instruction">
-        {!hasGameStarted ? (
+      <div className="legend__instruction">
+        {!gameStarted ? (
           <p>
             <span>
               Разместите свои корабли на игровой доске и начните игру
             </span>
           </p>
         ) : (
-          <SummaryGameStats
-            playerDeployedShips={playerDeployedShips}
-            computerDeployedShips={computerDeployedShips}
-          />
+          <legendGameStats/>
         )}
 
         <ul className="game__stats">
@@ -42,13 +35,8 @@ const index = ({
           </li>
         </ul>
       </div>
-      {playerAvailableShips.length === 0 ? (
-        <button className="summary__btn" onClick={handleGameStart}>
-          {hasGameStarted ? "Restart Game" : "Start Game"}
-        </button>
-      ) : null}
     </div>
   );
 };
 
-export default index;
+export default Legend;

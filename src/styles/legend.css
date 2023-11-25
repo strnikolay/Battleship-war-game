@@ -1,0 +1,89 @@
+
+.legend {
+  height: 20vh;
+
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .legend__info {
+    width: 100%;
+  }
+
+
+  .legend__start:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .legend__instruction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .legend__instruction p {
+    font-size: 14px;
+  }
+  
+  .legend__instruction ul,
+  .legend__game--status ul {
+    list-style: none;
+  }
+  
+  .legend__instruction ul li {
+    text-align: center;
+  }
+  
+  .legend__instruction .miss,
+  .legend__instruction .hit,
+  .legend__instruction .ship-sunk {
+    display: inline-flex;
+    height: 10px;
+    width: 10px;
+  }
+  
+  .ins {
+    margin-left: 10px;
+  }
+
+  .legend__btn {
+    background-color: #fff;
+    color: #000;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    transition: all 0.2s;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+
+
+
+.legend__game--status {
+  display: flex;
+  border: 1px solid #777;
+  align-items: center;
+  justify-content: center;
+}
+
+.player__info {
+  text-align: center;
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+}
+.player__info:not(:last-child) {
+  border-right: 1px solid #777;
+}
+.player__info h5 {
+  flex: 1;
+}
+.game__stats {
+  padding: 4px;
+}
+
