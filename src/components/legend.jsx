@@ -2,7 +2,7 @@
 
 const Legend = ({
   gameStarted,
-  playerAvailableShips,
+  nonPlaysmentPlayerShips,
   handleGameStart,
   currentPlayer,
   playerDeployedShips,
@@ -42,11 +42,11 @@ const Legend = ({
           </li>
         </ul>
       </div>
-      {/*{playerAvailableShips.length === 0 ? (
+      {nonPlaysmentPlayerShips.length === 0 ? (
         <button className="legend__btn" onClick={handleGameStart}>
           {gameStarted ? "Restart Game" : "Start Game"}
         </button>
-      ) : null}*/}
+      ) : null}
     </div>
   );
 };

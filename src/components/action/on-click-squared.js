@@ -45,11 +45,11 @@ const onClickSquare = ({ rowIndex, columnIndex, clickedShip }) => {
           };
           setPlayerDeployedShips([...playerDeployedShips, deployableShipObj]);
 
-          const newPlayerAvailableShips = playerAvailableShips.filter(
+          const newnonPlaysmentPlayerShips = nonPlaysmentPlayerShips.filter(
             (ship) => ship.name !== selectedShipToPlace.name
           );
 
-          setPlayerAvailableShips(newPlayerAvailableShips);
+          setnonPlaysmentPlayerShips(newnonPlaysmentPlayerShips);
           setSelectedShipToPlace(null);
           playSound("click");
         } else {

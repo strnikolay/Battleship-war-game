@@ -1,6 +1,5 @@
 
-export const SHIPS = [
-  
+export const SHIPS = [  
   {
     name: "carrier",
     shipLength: 5

@@ -3,14 +3,13 @@ import React, { useEffect, useState} from "react";
 
 import Board from "./board/board";
 import Legend from "./legend";
-
-
-
-
+import { SHIPS} from "./DB";
 
 const Game = () => {
-  const [gameStarted, setStartGame] = useState(false);
+  const [isGameStarted, setIsStartGame] = useState(false);
   const [currentPlayer, setCurrentPlayer] = useState(true);
+
+  const [nonPlaysmentPlayerShips, setNonPlaysmentPlayerShips] = useState(SHIPS);
 
   /*useEffect(() => {
     if (gameStarted && !currentPlayer) {
@@ -24,7 +23,8 @@ const Game = () => {
   return(
     <div className="screen">
       <Legend
-        gameStarted={gameStarted}
+        isGameStarted={isGameStarted}
+        nonPlaysmentPlayerShips={nonPlaysmentPlayerShips}
         currentPlayer={currentPlayer}
       />
       <Board 
