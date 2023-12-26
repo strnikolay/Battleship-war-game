@@ -1,5 +1,5 @@
 
-
+/* inventory starts */
 .battleship__inventory {
     max-width: 35%;
   }
@@ -68,3 +68,5 @@
   .intevtory__axis button:not(:last-child) {
     margin-right: 1px;
   }
+  
+  /* inventory ends */

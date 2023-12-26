@@ -4,6 +4,7 @@
   margin: 0;
 }
 
+/* start page starts */
 .start-screen {
   height: 100vh;
   width: 100%;
@@ -32,10 +33,14 @@
   background-color: #0000b6;
 }
 
+/* start page ends */
+
 .screen {
   width: 100%;
   height: 100vh;
 }
+
+/* game component start */
 
 .content {
   margin-left: 10px;
@@ -58,6 +63,15 @@
 
 }
 
+/* battship component end */
+
+
+
+
+
+
+
+/* board starts */
 .battleship__board {
   --board-rows: 10;
   --board-columns: 10;
@@ -75,6 +89,9 @@
   pointer-events: none;
 }
 
+/* board ends */
+
+/* BoardSquare starts */
 .board__square {
   border: 1px solid #000000;
   cursor: crosshair;
@@ -107,7 +124,9 @@
   background-color: #6d67e4;
 }
 
+/* BoardSquare ends */
 
+/* axis starts */
 .square-title {
   position: absolute;
   display: flex;
@@ -130,6 +149,9 @@
   top: 80px;
 }
 
+/* exis ends */
+
+/* axis items starts */
 .square-title-label {
   width: 100%;
   height: 100%;
@@ -137,4 +159,4 @@
   justify-content: center;
   align-items: center;
 }
-
+/* exis items ends */

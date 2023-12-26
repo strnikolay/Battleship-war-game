@@ -1,8 +1,12 @@
-
+//import legendGameStats from "./legendStats";
 
 const Legend = ({
   gameStarted,
+  playerAvailableShips,
+  handleGameStart,
   currentPlayer,
+  playerDeployedShips,
+  computerDeployedShips
 }) => {
   return (
     <div className="legend">
@@ -17,7 +21,10 @@ const Legend = ({
             </span>
           </p>
         ) : (
-          <legendGameStats/>
+          <legendGameStats
+            playerDeployedShips={playerDeployedShips}
+            computerDeployedShips={computerDeployedShips}
+          />
         )}
 
         <ul className="game__stats">
@@ -35,6 +42,11 @@ const Legend = ({
           </li>
         </ul>
       </div>
+      {/*{playerAvailableShips.length === 0 ? (
+        <button className="legend__btn" onClick={handleGameStart}>
+          {gameStarted ? "Restart Game" : "Start Game"}
+        </button>
+      ) : null}*/}
     </div>
   );
 };

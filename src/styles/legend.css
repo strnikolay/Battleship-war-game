@@ -1,7 +1,7 @@
-
+/* legend starts */
 .legend {
   height: 20vh;
-
+    /*margin: 40px 0;*/
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -63,7 +63,7 @@
 
 
 
-
+  /* legendStats starts */
 .legend__game--status {
   display: flex;
   border: 1px solid #777;
@@ -87,3 +87,4 @@
   padding: 4px;
 }
 
+/* legendStats ends */

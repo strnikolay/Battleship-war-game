@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState} from "react";
+import React, { useEffect, useState} from "react";
 
 import Board from "./board/board";
 import Legend from "./legend";
@@ -11,6 +11,14 @@ import Legend from "./legend";
 const Game = () => {
   const [gameStarted, setStartGame] = useState(false);
   const [currentPlayer, setCurrentPlayer] = useState(true);
+
+  /*useEffect(() => {
+    if (gameStarted && !currentPlayer) {
+      setTimeout(() => {
+        attackByComputer();
+      }, [200]);
+    }
+  }, [gameStarted, currentPlayer]);*/
 
 
   return(
